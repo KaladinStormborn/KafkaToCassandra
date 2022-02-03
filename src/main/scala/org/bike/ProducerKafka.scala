@@ -24,6 +24,7 @@ object ProducerKafka extends App {
     for (line <- source.getLines().drop(1)) {
 
       val record = new ProducerRecord[String, String](topic, line)
+      producer.send(record)
       Thread.sleep(10000)
     }
   } catch {

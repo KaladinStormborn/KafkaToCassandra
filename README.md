@@ -11,7 +11,6 @@
 ```
 CREATE TABLE trip(
 ride_id text primary key,
-rideable_type text,
 started_time timestamp,
 ended_time timestamp,
 start_lat double,
